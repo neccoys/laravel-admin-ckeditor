@@ -1,3 +1,4 @@
+@include('ckfinder::setup')
 <div class="{{$viewClass['form-group']}} {!! !$errors->has($errorKey) ? '' : 'has-error' !!}">
 
   <label for="{{$id}}" class="{{$viewClass['label']}} control-label">{{$label}}</label>
