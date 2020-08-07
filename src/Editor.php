@@ -27,6 +27,7 @@ class Editor extends Textarea
             height:250
         } );
         CKFinder.setupCKEditor( editor );
+        CKFinder.config( { connectorPath: '/ckfinder/connector' } );
 EOT;
         return parent::render();
     }
