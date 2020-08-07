@@ -10,7 +10,5 @@ class CKEditor extends Extension
 
     public $views = __DIR__.'/../resources/views';
 
-    public $assets_ckeditor = __DIR__.'/../resources/assets/ckeditor/ckeditor';
-
-    public $assets_ckfinder = __DIR__.'/../resources/assets/ckeditor/ckfinder';
+    public $assets = __DIR__.'/../resources/assets/laravelCK';
 }
