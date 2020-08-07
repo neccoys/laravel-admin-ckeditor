@@ -23,7 +23,7 @@ class Editor extends Textarea
 	    $config = json_encode($config);
 	    
         $this->script = <<<EOT
-        CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
+        var editor = CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
         CKFinder.setupCKEditor(editor);
 EOT;
         return parent::render();
