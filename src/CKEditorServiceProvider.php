@@ -27,7 +27,7 @@ class CKEditorServiceProvider extends ServiceProvider
                 // 'neccoys-ckeditor'
                 [
                     // ckfinder & ckeditor static
-                    $assets => public_path('vendor/neccoys/LaravelCK'),
+                    $extension->assets() => public_path('vendor/neccoys/LaravelCK'),
 
                     // CKFinder 
 		            // __DIR__ . '/config.php' => config_path('ckfinder.php')
