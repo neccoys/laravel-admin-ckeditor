@@ -26,6 +26,7 @@ class Editor extends Textarea
         var editor = CKEDITOR.replace( '{$this->id}', {
             height:250
         } );
+        CKFinder.setupCKEditor( editor );
 EOT;
         return parent::render();
     }
