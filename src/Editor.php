@@ -23,8 +23,11 @@ class Editor extends Textarea
 	    $config = json_encode($config);
 	    
         $this->script = <<<EOT
-        var editor = CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
-        CKFinder.setupCKEditor(editor);
+        var editor = CKEDITOR.replace( '{$this->id}', {
+            removePlugins: 'image',
+            height:250
+        } );
+        CKFinder.setupCKEditor( editor );
 EOT;
         return parent::render();
     }
