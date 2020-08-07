@@ -1,6 +1,6 @@
 {
-  "name": "neccoys/ckeditor",
-  "description": "CKEditor 4 集成laravel-admin",
+  "name": "neccoys/adminck",
+  "description": "CKEditor&CKfinder 集成 laravel-admin laravel7",
   "type": "library",
   "keywords": [
     "laravel-admin",
@@ -25,13 +25,13 @@
   },
   "autoload": {
     "psr-4": {
-      "neccoys\\CKEditor\\": "src"
+      "neccoys\\AdminCK\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "neccoys\\CKEditor\\CKEditorServiceProvider"
+        "neccoys\\AdminCK\\AdminCKServiceProvider"
       ]
     }
   }
