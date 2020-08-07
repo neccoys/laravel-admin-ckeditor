@@ -1,10 +1,10 @@
 <?php
 
-namespace neccoys\CKEditor;
+namespace neccoys\AdminCK;
 
 use Encore\Admin\Extension;
 
-class CKEditor extends Extension
+class AdminCK extends Extension
 {
     public $name = 'ckeditor';
 

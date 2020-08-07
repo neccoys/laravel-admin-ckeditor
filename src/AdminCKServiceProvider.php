@@ -1,38 +1,36 @@
 <?php
 
-namespace neccoys\CKEditor;
+namespace neccoys\AdminCK;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
 use Illuminate\Support\ServiceProvider;
 
-class CKEditorServiceProvider extends ServiceProvider
+class AdminCKServiceProvider extends ServiceProvider
 {
     /**
      * {@inheritdoc}
      */
-    public function boot(CKEditor $extension)
+    public function boot(AdminCK $extension)
     {
-        if (! CKEditor::boot()) {
+        if (! AdminCK::boot()) {
             return ;
         }
 
         if ($views = $extension->views()) {
-            $this->loadViewsFrom($views, 'neccoys-ckeditor');
+            $this->loadViewsFrom($views, 'neccoys-adminck');
         }
 
         if ($this->app->runningInConsole()) {
             $this->publishes(
-                // [$assets => public_path('vendor/neccoys/ckeditor/ckeditor')],
-                // 'neccoys-ckeditor'
                 [
                     // ckfinder & ckeditor static
-                    $extension->assets() => public_path('vendor/neccoys/LaravelCK'),
+                    $extension->assets() => public_path('vendor/neccoys/AdminCK'),
 
                     // CKFinder 
 		            // __DIR__ . '/config.php' => config_path('ckfinder.php')
                 ],
-                'neccoys-ckeditor'
+                'neccoys-adminck'
             );
         }
         

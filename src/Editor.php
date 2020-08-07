@@ -1,21 +1,21 @@
 <?php
 
-namespace neccoys\CKEditor;
+namespace neccoys\AdminCK;
 
 use Encore\Admin\Form\Field\Textarea;
 
 class Editor extends Textarea
 {
-    protected $view = 'neccoys-ckeditor::editor';
+    protected $view = 'neccoys-adminck::editor';
 
     protected static $js = [
-	    'vendor/neccoys/laravelCK/ckeditor/ckeditor.js',
-	    'vendor/neccoys/laravelCK/ckfinder/ckfinder.js',
+	    'vendor/neccoys/AdminCK/ckeditor/ckeditor.js',
+	    'vendor/neccoys/AdminCK/ckfinder/ckfinder.js',
     ];
 
     public function render()
     {
-        $config = (array) CKEditor::config('config');
+        $config = (array) AdminCK::config('config');
 
         $config = array_merge($config, $this->options);
 	    $config['simpleUpload']['headers'] = ['X-CSRF-TOKEN' => csrf_token()];
