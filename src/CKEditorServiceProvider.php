@@ -30,9 +30,9 @@ class CKEditorServiceProvider extends ServiceProvider
         
 	    Admin::booting(function () {
 		    Form::extend('editor', Editor::class);
-		    $config = (array) CKEditor::config('config');
-		    if (empty($config['language'])) $config['language']=strtolower((string) config('app.locale'));
-		    Admin::js('vendor/neccoys/ckeditor/translations/'.$config['language'].'.js');
+		    // $config = (array) CKEditor::config('config');
+		    // if (empty($config['language'])) $config['language']=strtolower((string) config('app.locale'));
+		    // Admin::js('vendor/neccoys/ckeditor/translations/'.$config['language'].'.js');
 	    });
     }
 }

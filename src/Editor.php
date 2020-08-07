@@ -24,10 +24,8 @@ class Editor extends Textarea
 	    
         $this->script = <<<EOT
         var editor = CKEDITOR.replace( '{$this->id}', {
-            removePlugins: 'image',
             height:250
         } );
-        CKFinder.setupCKEditor( editor );
 EOT;
         return parent::render();
     }
