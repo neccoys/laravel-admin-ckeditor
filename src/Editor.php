@@ -10,7 +10,7 @@ class Editor extends Textarea
 
     protected static $js = [
 	    'vendor/neccoys/ckeditor/ckeditor.js',
-//	    'vendor/neccoys/ckeditor/translations/zh-cn.js',
+	    'js/ckfinder/ckfinder.js',
     ];
 
     public function render()
@@ -23,7 +23,8 @@ class Editor extends Textarea
 	    $config = json_encode($config);
 	    
         $this->script = <<<EOT
-		CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
+        CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
+        CKFinder.setupCKEditor(editor);
 EOT;
         return parent::render();
     }
