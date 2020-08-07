@@ -23,14 +23,7 @@ class Editor extends Textarea
 	    $config = json_encode($config);
 	    
         $this->script = <<<EOT
-		ClassicEditor.create( document.querySelector( '#{$this->id}' ),{$config})
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( err => {
-			console.error( err.stack );
-		} );
-		
+		CKEDITOR.replace( document.querySelector( '#{$this->id}' ),{$config} )
 EOT;
         return parent::render();
     }
