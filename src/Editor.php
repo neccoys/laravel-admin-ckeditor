@@ -9,7 +9,7 @@ class Editor extends Textarea
     protected $view = 'neccoys-ckeditor::editor';
 
     protected static $js = [
-	    'vendor/neccoys/ckeditor/ckeditor.js',
+	    'vendor/neccoys/ckeditor/ckeditor/ckeditor.js',
 	    'js/ckfinder/ckfinder.js',
     ];
 
