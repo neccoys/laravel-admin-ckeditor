@@ -9,8 +9,8 @@ class Editor extends Textarea
     protected $view = 'neccoys-ckeditor::editor';
 
     protected static $js = [
-	    'vendor/neccoys/ckeditor/ckeditor/ckeditor.js',
-	    'js/ckfinder/ckfinder.js',
+	    'vendor/neccoys/laravelCK/ckeditor/ckeditor.js',
+	    'vendor/neccoys/laravelCK/ckfinder/ckfinder.js',
     ];
 
     public function render()

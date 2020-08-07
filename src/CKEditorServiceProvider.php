@@ -21,9 +21,17 @@ class CKEditorServiceProvider extends ServiceProvider
             $this->loadViewsFrom($views, 'neccoys-ckeditor');
         }
 
-        if ($this->app->runningInConsole() && $assets = $extension->assets()) {
+        if ($this->app->runningInConsole()) {
             $this->publishes(
-                [$assets => public_path('vendor/neccoys/ckeditor')],
+                // [$assets => public_path('vendor/neccoys/ckeditor/ckeditor')],
+                // 'neccoys-ckeditor'
+                [
+                    // ckfinder & ckeditor static
+                    __DIR__ . '/../resources/assets' => public_path('vendor/neccoys/LaravelCK'),
+
+                    // CKFinder 
+		            __DIR__ . '/config.php' => config_path('ckfinder.php')
+                ],
                 'neccoys-ckeditor'
             );
         }
